@@ -13,6 +13,7 @@
 		1A4CBA9C23B9BBB700987EFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4CBA9A23B9BBB700987EFB /* Main.storyboard */; };
 		1A4CBA9E23B9BBB800987EFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4CBA9D23B9BBB800987EFB /* Assets.xcassets */; };
 		1A4CBAA123B9BBB800987EFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4CBA9F23B9BBB800987EFB /* LaunchScreen.storyboard */; };
+		1AB148FE23D0627E006522A1 /* viread.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AB148FD23D0627E006522A1 /* viread.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1A4CBA9D23B9BBB800987EFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A4CBAA023B9BBB800987EFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A4CBAA223B9BBB800987EFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AB148FD23D0627E006522A1 /* viread.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = viread.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		1A4CBA9323B9BBB700987EFB /* DatePicker */ = {
 			isa = PBXGroup;
 			children = (
+				1AB148FD23D0627E006522A1 /* viread.jpg */,
 				1A4CBA9423B9BBB700987EFB /* AppDelegate.swift */,
 				1A4CBA9623B9BBB700987EFB /* SceneDelegate.swift */,
 				1A4CBA9823B9BBB700987EFB /* ViewController.swift */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB148FE23D0627E006522A1 /* viread.jpg in Resources */,
 				1A4CBAA123B9BBB800987EFB /* LaunchScreen.storyboard in Resources */,
 				1A4CBA9E23B9BBB800987EFB /* Assets.xcassets in Resources */,
 				1A4CBA9C23B9BBB700987EFB /* Main.storyboard in Resources */,
@@ -287,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4W2HHUZTYT;
 				INFOPLIST_FILE = DatePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4W2HHUZTYT;
 				INFOPLIST_FILE = DatePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

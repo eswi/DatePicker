@@ -36,9 +36,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func scheduleNotification() {
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+    func scheduleNotification(scheduledDate: NSDate) {
+        let currentCalendar = Calendar.autoupdatingCurrent
+        let comps = currentCalendar.dateComponents([.year, .month, .day, .hour, .minute],from: scheduledDate as Date)
         
+        print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+        print(">>>>  \(comps.year!)/\(comps.month!)/\(comps.day!) \(comps.hour!):\(comps.minute!)")
+        print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+        
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: false)
+
         let content = UNMutableNotificationContent()
         content.title = "투약안내"
         content.body = "주인님, 약 드실 시간입니다"
@@ -52,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let url = URL(fileURLWithPath: path)
         
         print("Pass 1: \(url.path)")
-        
+
         do {
             let attachment = try UNNotificationAttachment(identifier: "투약안내", url: url, options: nil)
             content.attachments = [attachment]
@@ -60,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             print("The attachment could ot be loaded")
         }
-        
+
         let reqeust = UNNotificationRequest(identifier: "투약안내", content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
@@ -91,4 +99,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
